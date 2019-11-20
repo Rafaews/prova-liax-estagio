@@ -27,7 +27,9 @@ public class AssociadoDAO {
 			
 			stmt.setLong(1, associado.getCd_associado());
 			stmt.setString(2, associado.getNm_associado());
-			stmt.setDate(3, (Date) associado.getDt_nascimento());			
+			java.util.Date dataUtil = new java.util.Date();
+			java.sql.Date dt_nascimento = new java.sql.Date(associado.getDt_nascimento().getTime());
+			stmt.setDate(3, dt_nascimento);			
 			
 			stmt.execute();
 
@@ -78,6 +80,43 @@ public class AssociadoDAO {
 				}
 
 			} catch (Exception e) {
+				e.printStackTrace();
+			}
+		}
+	}
+	
+	public void deleteById(Long id) {
+
+		String sql = "DELETE FROM tbod_associado WHERE cd_associado = ?";
+
+		Connection conn = null;
+		PreparedStatement stmt = null;
+
+		try {
+			conn = ConnectionFactory.createConnection();
+
+			stmt = conn.prepareStatement(sql);
+
+			stmt.setLong(1, id);
+
+			stmt.execute();
+
+		} catch (Exception e) {			
+			e.printStackTrace();
+		} finally {			
+
+			try {
+				if (stmt != null) {
+
+					stmt.close();
+				}
+
+				if (conn != null) {
+					conn.close();
+				}
+
+			} catch (Exception e) {
+
 				e.printStackTrace();
 			}
 		}

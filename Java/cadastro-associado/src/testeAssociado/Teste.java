@@ -1,4 +1,4 @@
-package teste;
+package testeAssociado;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -6,7 +6,9 @@ import java.io.InputStreamReader;
 import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import model.Associado;
 import dao.AssociadoDAO;
@@ -24,9 +26,7 @@ public class Teste {
         System.out.println("5. Exit the program");
         System.out.println("");
         System.out.print("Selecione uma opção de 1-5\r\n");
-        
-        
-        
+                       
         try {
             int input = Integer.parseInt(br.readLine());
             
@@ -37,12 +37,15 @@ public class Teste {
               break;
             case 2:
             	System.out.println("Você escolheu a opção " + input + "\r\n");
+            	AlterarAssociado();
               break;
             case 3:
             	System.out.println("Você escolheu a opção " + input + "\r\n");
+            	ApagarAssociado();
                 break;
             case 4:
             	System.out.println("Você escolheu a opção " + input + "\r\n");
+            	ListarAssociados();
                 break;
             case 5:
             	 System.out.println("O programa será finalizado\r\n");
@@ -73,8 +76,40 @@ public class Teste {
 
 	   
 	   AssociadoDAO associadoDAO = new AssociadoDAO();
-	   associadoDAO.save(associado);
+	   associadoDAO.save(associado);   
 	   	   	   	  
+   }
+   
+   public static void ApagarAssociado() throws IOException, ParseException { 
+	   Associado associado = new Associado();
+	   
+	   System.out.println("Digite o código do associado que deseja apagar : \r\n");
+	   associado.setCd_associado(Long.parseLong(br.readLine()));
+	   	  
+	   AssociadoDAO associadoDAO = new AssociadoDAO();
+	   associadoDAO.deleteById(associado.getCd_associado());
+	   	   	   	  
+   }
+   
+   public static void AlterarAssociado() throws IOException, ParseException { 
+	   Associado associado = new Associado();
+	   
+	   System.out.println("Digite o código do associado que deseja Alterar : \r\n");
+	   associado.setCd_associado(Long.parseLong(br.readLine()));
+	   	  	   	   	   	 
+   }
+   
+   public static void ListarAssociados() throws IOException, ParseException { 
+	   AssociadoDAO associadoDAO = new AssociadoDAO();
+	   
+		for (Associado assoc : associadoDAO.getAssociados()) {
+
+			System.out.println("Carteirinha: " + assoc.getCd_associado());
+			System.out.println("Nome: " + assoc.getNm_associado());
+			// continuar..
+		}
+	   
+	   	  	   	   	   	 
    }
 
 }

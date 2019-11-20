@@ -7,10 +7,10 @@ public class ConnectionFactory {
 
 	private static final String USERNAME = "root";
 	public  static final String PASSWORD = "root";
-	private static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/provaliax";
+	private static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/provaliax?useTimezone=true&serverTimezone=UTC";
 
 	public static Connection createConnection() throws Exception {
-		Class.forName("com.mysql.jdbc.Driver");
+		//Class.forName("com.mysql.jdbc.Driver");
 		try {
 			Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
 			return connection;
@@ -24,7 +24,7 @@ public class ConnectionFactory {
 	public static void main(String[] args) throws Exception {
 		Connection con = createConnection();
 		if (con != null) {
-			System.out.println("Conexão com banco de dados realizada com sucesso!" + con);
+			System.out.println("Conexão com banco de dados realizada com sucesso!");
 			con.close();
 		}
 	}
