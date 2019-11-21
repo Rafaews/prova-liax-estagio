@@ -15,7 +15,7 @@ public class AssociadoDAO {
 	
 	public void save(Associado associado) {
 
-		String query = "INSERT INTO tbod_associado(cd_associado,nm_associado,dt_nascimento,dt_cadastro) VALUES(?,?,?,SYSDATE)";
+		String query = "INSERT INTO tbod_associado(cd_associado,nm_associado,dt_nascimento,dt_cadastro) VALUES(?,?,?,SYSDATE())";
 
 		Connection conn = null;
 		PreparedStatement stmt = null;

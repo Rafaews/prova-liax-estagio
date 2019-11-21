@@ -76,7 +76,8 @@ public class Teste {
 
 	   
 	   AssociadoDAO associadoDAO = new AssociadoDAO();
-	   associadoDAO.save(associado);   
+	   associadoDAO.save(associado); 
+	   System.out.println("Associado cadastrado com sucesso!");
 	   	   	   	  
    }
    
@@ -88,6 +89,7 @@ public class Teste {
 	   	  
 	   AssociadoDAO associadoDAO = new AssociadoDAO();
 	   associadoDAO.deleteById(associado.getCd_associado());
+	   System.out.println("Associado apagado com sucesso!");
 	   	   	   	  
    }
    
@@ -96,6 +98,7 @@ public class Teste {
 	   
 	   System.out.println("Digite o código do associado que deseja Alterar : \r\n");
 	   associado.setCd_associado(Long.parseLong(br.readLine()));
+	   System.out.println("Associado alterado com sucesso!");
 	   	  	   	   	   	 
    }
    
