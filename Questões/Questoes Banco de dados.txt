@@ -1,8 +1,15 @@
-1 - Descobrir o cargo de um associado buscando pelo cd_associado
+Monte querys SQL que atendam os tópicos a seguir:
+
+Por exemplo:
+0 - Trazer todos os associados cadastrados:
+SELECT * FROM TBOD_ASSOCIADO;
+
+
+1 - Descobrir o cargo de um associado buscando pelo cd_associado.
 
 2 - qual o associado mais velho e sua idade ?
 
-3 - Organize os associados e os cargos por ordem alfabetica.
+3 - exiba os associados por cargos por ordem alfabetica.
 
 4 - Liste os associados seu/seus cargos e suas permissoes em ordem de idade decrescente.
 
