@@ -1,0 +1,20 @@
+Para executar o projeto, é necessário ter instalado a versão 8 ou superior do java JDK, a mesma pode ser encontrada em:
+
+https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html
+
+A ide recomendada é o eclipse, que pode ser encontrado em :
+https://www.eclipse.org/downloads/
+
+
+Também foi utilizada a versão 8.0.18.0 msi do mysql(já é instalado o mysql workbench de modo conjunto, que um SGBD, mas pode ser utilizado qualquer um de sua preferencia).
+
+https://dev.mysql.com/downloads/windows/installer/8.0.html
+
+dica: tente configurar o usuario e senha como: root e root, caso configure de outro modo, será necessario alterar na classe de conexao do projeto.
+
+
+dentro desta pasta existe o mysql-connector, caso o esteja enfrentando problemas para conectar o projeto ao banco, pode ser a falta do conector, para adiciona-lo,
+dentro do eclipse, clique com o botão direito no projeto, depois disso clique em build-path e depois em configure build path, e então add external jars, selecionando o jar em questão, mysql-connector-java-8.0.18. Caso opte por utilizar uma versão do mysql já instalado em sua maquina, talvez seja necessário baixar uma versão compativel do conector, que pode ser facilmente encontrada no google.
+
+
+Dentro da pasta Banco de dados, existe um script, onde sera criado o banco de dados da prova, as tabelas necessárias e também sera instalado dados para que você possa testar suas consultas.

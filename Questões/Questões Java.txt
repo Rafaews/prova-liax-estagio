@@ -1,0 +1,22 @@
+Para a avaliação de desenvolvimento, temos um crud básico em JAVA, temos funções prontas e funcionais, temos funções incompletas, e funções não implementadas. Além dos
+tópicos listados, existem diversos pontos que podem ser alterados no código para que o mesmo se torne mais performático, legível, e dentro dos padrões de desenvolvi-
+mento, fique livre para modifica-lo do modo que quiser, e alterar quaisquer pontos que necessite. As questões não possuem pontuação especifica e nem certo ou errado, ou seja, você não necessáriamente necessita saber/entregar tudo para ser avaliado, apenas faça o melhor que conseguir.
+
+Pontos a serem feitos:
+
+No projeto, temos apenas 3 classes java, sendo elas a classe de conexão com banco(ConnectionFactory), o model e a DAO, e também temos uma classe de Teste,
+onde implementamos as chamadas dos métodos criados a fim de validarmos o seu funcionamento.
+
+1 - Na classe teste, temos um menu, onde o mesmo dá possibilidades de escolha para o usuário, recebendo como entrada um número, e através de um switch case é chamado
+os métodos correspondentes, porém, ao executarmos qualquer opção a execução do programa é interrompida e para isso é necessário melhorar o método para que o mesmo seja
+chamado novamente após a execução de uma função, a não ser que seja interrompido pelo proprio usuário, para isso será necessário a utilização de um loop, como por exemplo um for, while, do while.
+
+2 - Temos a função de Alterar o associado, a mesma encontra-se incompleta, onde é necessário receber do usuário os outros dados a serem alterados, preenchendo corretamente o objeto já instanciado e assim chamando o método update da classe AssociadoDAO onde o mesmo também se encontra incompleto e necessita ser implementado. Lembre-se, básicamente os métodos funcionam da mesma forma, mudando apenas os parametros passados e a consulta SQL, ou seja, tudo que você necessita para completar o método, já esta dentro do programa, mas fique livre para buscar pela internet caso necessite.
+
+3 - Temos também o método Listar Associado, onde o mesmo também está incompleto, porém, já traz os dados corretamente, apenas necessitando de atuação na classe de teste onde é necessário alterar a exibição dos dados, para que mostre todos os dados do associado de forma legivel.
+
+4 - Oque você acha que pode ser melhorado neste sistema, oque foi feito de modo incorreto ? E oque você gostaria de implementar para que o mesmo funcionasse de um 
+modo mais amigável ao usuário.
+
+5 - Quais conceitos de orientação a objetos foi utilizado neste crud ? Quais você acha que poderiam ser implementados ?
+

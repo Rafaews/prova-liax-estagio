@@ -10,7 +10,7 @@ public class ConnectionFactory {
 	private static final String DATABASE_URL = "jdbc:mysql://127.0.0.1:3306/provaliax?useTimezone=true&serverTimezone=UTC";
 
 	public static Connection createConnection() throws Exception {
-		//Class.forName("com.mysql.jdbc.Driver");
+		
 		try {
 			Connection connection = DriverManager.getConnection(DATABASE_URL, USERNAME, PASSWORD);
 			return connection;
